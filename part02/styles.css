@@ -1,0 +1,20 @@
+   *{
+      background-color: beige;
+      font-size: xx-large;
+    }
+    p.c1 {
+      background-color: silver;
+      color:green;
+    }
+    p.c2 {
+      font-size:large;
+    }
+    h1.c1 {
+      background-color: lightblue;
+      color:gainsboro;
+    }
+    .test{
+      background-color: burlywood;
+      color: black;
+    }
+ 
