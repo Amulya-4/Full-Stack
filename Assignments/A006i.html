@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function f1() {
+    const number = document.getElementById('t1').value;
+    const resultElement = document.getElementById('result');
+    if (number > 0) {
+        resultElement.textContent = 'The number is positive.';
+    } else if (number < 0) {
+        resultElement.textContent = 'The number is negative.';
+    } else {
+        resultElement.textContent = 'The number is zero.';
+    }
+}
+  </script>
+</head>
+<body>
+  <p><input type="text" id="t1"></p>
+  <button onclick="f1()">Submit</button>
+  <p id="result"></p>
+</body>
+</html>

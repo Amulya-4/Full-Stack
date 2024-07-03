@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function f1(){
+      let n=l.value;
+      let m=b.value;
+      let x=n*m;
+      if(n==m){
+         lbl.innerHTML=`${x} is a Square `;
+      }
+      else{
+        lbl.innerHTML=`${x} is a Rectangle `;
+      }
+    }
+  </script>
+</head>
+<body>
+  <p><input type="text" placeholder="length" id="l"></p>
+  <p><input type="text" placeholder="breadth" id="b"></p>
+  <button onclick="f1()">Submit</button>
+  <p><label id="lbl"></label></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function great() {
+     let n=Number(document.getElementById('a').value);
+     let m=Number(document.getElementById('b').value);
+     let o=Number(document.getElementById('c').value);
+     let lbl=document.getElementById('lbl');
+      if(n>m && n>o){
+        lbl.innerHTML=`${n} is greater`;
+      }
+      else if(m>n && m>o){
+        lbl.innerHTML=`${m} is greater`;
+      }
+      else
+      {
+        lbl.innerHTML=`${o} is greater`;
+      }
+    }
+  </script>
+</head>
+<body>
+  <p><input type="text" placeholder="enter numbers of a" id="a"></p>
+  <p><input type="text" placeholder="enter numbers of b" id="b"></p>
+  <p><input type="text" placeholder="enter numbers of c" id="c"></p>
+  <button onclick="great()">Submit</button>
+  <p><label id="lbl"></label></p>
+</body>
+</html>
