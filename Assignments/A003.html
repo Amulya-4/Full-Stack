@@ -15,8 +15,20 @@
   }
   .row{
     display:flex;
-
+    justify-content: center;
+    flex-wrap: wrap;
   }
+  .cart{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    font-style: italic;
+  }
+  fieldset{
+    text-align: center;
+    padding:20px;
+  }
+ 
 </style>
 <script>
   function fnc(){
@@ -24,48 +36,63 @@
   }
 </script>
 <body>
-  <pre><i><b>Coffee shop</i></b>                                                                                                                                                              <i>cart:0</i></pre>
-  <hr>
+  
+  <fieldset>
+  <legend><h1>KEFI</h1></legend> 
+  <h2><i>Life begins after Beer🍻🩵 ☕✨</i></h2><hr>
+<div class="cart">
+  <h2><b>Coffee shop</b></h2>                                                                                                                                                               
+  <h2><span>cart:0</span></h2>
+</div>
   <div class="row">
-  <div class="main">
-    <img src="/images/1.PNG"width="300" height="300"><br>
-    <h4>Product 1</h4>
-    <pre>Price:100<button onclick="fnc()">Add</button><br></pre>
+    <div class="main">
+      <div>
+        <img src="/images/1.PNG"width="300" height="300"><br>
+        <h4>Product 1</h4>
+        <pre>Price:100                       <button onclick="fnc()">Add</button><br></pre>
+      </div>
+      <hr><br>
     <div>
       <img src="/images/2.PNG"width="300" height="300"><br>
       <h4>product 5</h4>
-      <pre>Price:180<button onclick="fnc()">Add</button><br></pre>
+      <pre>Price:180                       <button onclick="fnc()">Add</button><br></pre>
     </div>
-    </div>
+    <br>
+  </div>
     <div class="main">
-      <img src="/images/3.PNG"width="300" height="300"><br>
-      <h4>Product 2</h4>
-      <pre>Price:110<button onclick="fnc()">Add</button><br></pre>
-      <div>
-        <img src="/images/4.PNG"width="300" height="300"><br>
-        <h4>product 6</h4>
-        <pre>Price:170<button onclick="fnc()">Add</button><br></pre>
+       <img src="/images/3.PNG"width="300" height="300"><br>
+       <h4>Product 2</h4>
+       <pre>Price:110                       <button onclick="fnc()">Add</button><br></pre>
+       <hr><br>
+       <div>
+         <img src="/images/4.PNG"width="300" height="300"><br>
+         <h4>product 6</h4>
+        <pre>Price:170                       <button onclick="fnc()">Add</button><br></pre>
       </div>
-      </div>
-      <div class="main">
+    </div>
+  <div class="main">
         <img src="/images/5.PNG"width="300" height="300"><br>
         <h4>Product 3</h4>
-        <pre>Price:190<button onclick="fnc()">Add</button><br></pre>
+        <pre>Price:190                       <button onclick="fnc()">Add</button><br></pre>
+        <hr><br>
         <div>
           <img src="/images/6.PNG" width="300" height="300"><br>
           <h4>product 7</h4>
-          <pre>Price:123<button onclick="fnc()">Add</button><br></pre>
+          <pre>Price:123                       <button onclick="fnc()">Add</button><br></pre>
         </div>
         </div>
         <div class="main">
           <img src="/images/2.PNG"width="300" height="300"><br>
           <h4>Product 4</h4>
-          <pre>Price:150<button onclick="fnc()">Add</button><br></pre>
+          <pre>Price:150                       <button onclick="fnc()">Add</button><br></pre>
+          <hr><br>
           <div>
             <img src="/images/1.PNG"width="300" height="300"><br>
             <h4>product 8</h4>
-            <pre>Price:145<button onclick="fnc()">Add</button><br></pre>
+            <pre>Price:145                       <button onclick="fnc()">Add</button><br></pre>
           </div>
-          </div>
+    </div>
+  </fieldset>
+
 </body>
 </html>
