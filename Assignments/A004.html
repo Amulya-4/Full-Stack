@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IRCTC Next Generation eTickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket</title>
 </head>
 <style>
-  * {
-      margin: auto;
-      border: px;
-      padding: 0;
-      box-sizing: border-box;
+  body {
+    background: url('/images/railway.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+    .one{
+        display: flex;
+        justify-content:space-around;
+        padding: 20px;
+    }    
+    .fun{
+        color:white;
+        background-color: rgb(33, 74, 161);
     }
-    .container {
-      height: auto;
-      width: 500px;
-      background-color: whitesmoke;
-      padding: 20px;
-      border: 1px solid #000;
-      border-radius: 10px;
-      position: relative;
+    .ticket{
+        color:rgb(33, 74, 161);
     }
-  .main{
-    display:flex;
-    justify-content:flex-start;
-    align-items: center;
-  }
-  .col{
-    color: white;
-    background-color: rgb(33, 74, 161);
-    padding: 5px;
-    size: 20px;
-    margin: 0 10px 0 0;
-  }
-  .tol{
-    color:rgb(33, 74, 161);
-  }
-  .btns {
-        flex-direction: column;
-  }
+    .two{
+        padding: 10px;
+        justify-content:space-around;
+    }
+    .border{
+        background-color:whitesmoke;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding:20px;
+        height:auto; 
+        width:500px;
+        position:relative;
+    }
+    .three{
+        display: flex;
+        padding: 10px;
+        justify-content:space-between;
+    }
+    .search{
+        color:white;
+        background-color: rgb(233, 135, 37);
+    }
+    .try{
+      color:white;
+      background-color: rgb(47, 216, 47);
+    }
 </style>
-</script>
 <body>
-  <div class="container">
-  <form action="">
-     <div class="main"><P>
-      <div><button class="col">PNR STATUS</button></div><br><br>
-      <div><button class="col">CHARTS/VACANCY</button></div></P></div>
-      <div class="tol">
-    <center><P><h2>BOOK TICKET</h2></P></center>
-    <input class="tol" type="text" placeholder="Form">
-    <input type="date"><br><br>
-    <input type="text" placeholder="To">
-    <select>
-      <option>All classes</option>
-      <option>AC First class(1A)</option>
-      <option>AC 2 tier(2A)</option>
-      <option>First Class(FC)</option>
-      <option>AC 3 Tier(3A)</option>
-    </select><br><br>
-    <select>
-      <option>GENERAL</option>
-      <option>LADIES</option>
-      <option>LOWER BERTH/SR.CITIZEN</option>
-    </select><br><br>
-    <input type="checkbox" name="Specfication1" value="Person With Disability Conession">Person With Disability Conession
-    <input type="checkbox" name="Specfication2" value="Flexible with Date">Flexible with Date<br>
-    <input type="checkbox" name="Specfication3" value="Train with Availble Berth">Train with Availble Berth
-    <input type="checkbox" name="Specfication4" value="Railway Pass Concession">Railway Pass Concession<br><br>
+    <div class="border">
+    <form>
+        <div class="one">
+            <button class="fun">PNR STATUS</button> 
+            <button class="fun">CHARTS / VACANCY</button>
+        </div>
+        <center><h2 class="ticket">BOOK TICKET</h2></center>
+        <div class="two">
+            <input type="text" placeholder="From" size="30px">
+            <input type="date">
+            <br><br>
+            <input type="text" placeholder="To" size="30px">
+            <select>
+                <option>All Classes</option>
+                <option>AC First Class (1A)</option>
+                <option>AC 2 Tier (2A)</option>
+                <option>AC 3 Tier (3A)</option>
+                <option>First Class (FC)</option>
+                <option>Sleeper (SL)</option>
+                </select>
+            <br><br>
+            <select>
+                <option>GENERAL</option>
+                <option>LADIES</option>
+                <option>SR.CITIZEN</option>
+                <option>PERSON WITH DISABILITY</option>
+                <option>TATKAL</option>
+            </select>
+        </div>
+        <div class="ticket">
+            <div class="two">
+            <b>
+            <input type="checkbox">Person With Disability Concession
+            <input type="checkbox">Flexibility With Date
+            <br>
+            <input type="checkbox">Train With Available Berth
+            <input type="checkbox">Railway Pass Concession
+            </b>
+            </div>
+        </div>
+        <div class="three">
+                <button class="search">Search</button>
+                <button class="try">Try Booking in Ask DISHA 2.0</button>
+        </div>
+    </form>
     </div>
-    <div class="btns">
-    <input type="Submit" value="search"/>
-    <button>Try bokking in Ask DISHA 2.0</button>
-  </div>
-  </form>
-  </div>
 </body>
 </html>
