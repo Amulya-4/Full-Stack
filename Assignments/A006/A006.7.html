@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function f1(){
+        let m=t1.value;
+        if (m >= 80) {
+            lbl.innerHTML = ` ${m} Grade-A`;
+        } else if (m >= 60) {
+            lbl.innerHTML = `${m} Grade-B`;
+        } else if (m >= 50) {
+            lbl.innerHTML = `${m} Grade-C`;
+        } else if (m >= 45) {
+            lbl.innerHTML = `${m} Grade-D`;
+        } else if (m >= 25) {
+            lbl.innerHTML = `${m} Grade-E`;
+        } else if (m < 25) {
+            lbl.innerHTML = `${m} Grade-F`;
+        } else {
+            lbl.innerHTML = `${m} Grade-F`;
+        }
+    }
+</script>
+<body>
+    <p><input type="number" placeholder="enter marks" id="t1"></p>
+    <button onclick="f1()">Submit</button>
+    <p><label id="lbl"></label></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisible by 5</title>
+</head>
+<script>
+    function f1(){
+    let n= t1.value;
+    if (n % 5==0){
+        lbl.innerHTML="Divisible by 5"
+    }
+    else{
+        lbl.innerHTML="Not Divisible by 5"
+    }
+}
+</script>
+<body>
+    <p><input type="Interger" placeholder="Enter Number" id="t1"></p>
+    <button onclick="f1()">Submit</button>
+    <p><label id="lbl"></label></p>
+</body>
+</html>
