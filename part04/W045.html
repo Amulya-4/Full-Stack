@@ -9,10 +9,10 @@
       let x=t1.value;
       let y= t2.value;
       if (x<y){
-        lbl.innerHTML=`${x} is greater`;
-      }
-      else if(y>x) {
         lbl.innerHTML=`${y} is greater`;
+      }
+      else if(y<x) {
+        lbl.innerHTML=`${x} is greater`;
       }
       else{
        lbl.innerHTML=`Both are equal`;
