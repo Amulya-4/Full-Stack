@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
 </head>
 <body>
-  
+    <script>
+        let fruits = ["apple", "orange", "mango"];
+        // let fruits = new Array("apple","orange","mango") //another representation
+        // console.log(fruits.length)
+        // fruits.push("banana")   //add in last
+        //   fruits.pop();   //delete from last
+        //   fruits.shift();   //delete first element
+        //   fruits.unshift("cherry");   //add to the beginning
+        //   fruits.reverse();   //reverse the order like decending
+        //   fruits.sort();      //sort accordint to alphabets in ascendind order
+        //   console.log(fruits.indexOf("apple"));   //prints index id //if there are 2 apples prints 1st one index
+        //   console.log(fruits.lastIndexOf("apple"));   //in case of 2 apples prints 2nd one index or if more than 2 last apple index prints
+        // console.log(fruits.includes("orange"))  //returns true or false
+        //   fruits.splice(1,2);
+        //   delete fruits[0];  //position will be their but element is deleted
+        let newArr = fruits.slice(1,1); //in slice first is index number to start(0,1,2) and 2nd is position(1,2,3)
+        console.log(fruits);
+        console.log(newArr);
+      </script>
 </body>
 </html>
