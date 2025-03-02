@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function validate(){
+            let strEmail = document.getElementById("txtEmail").value;
+            let strPass = document.getElementById("txtPass").value;
+            let found = users.find((value)=>{
+                return value.email === strEmail && value.pass === strPass
+            })
+            console.log(found)
+            if (found){
+                let strName = found.name
+                lblMessage.innerHTML = `Welcome ${strName}`;
+           } else {
+            lblMessage.innerHTML = "Access Denied";
+           }
+        }
+        const users = [];
+        function register(){
+            const obj= {};
+            obj.name= txtRegName.value;
+            obj.email= txtRegEmail.value;
+            obj.pass=txtRegPass.value;
+            users.push(obj);
+            lblUsers.innerHTML = JSON.stringify(users);
+        }
+    </script>
 </head>
 <body>
-    
+    <h3> Register Here....</h3>
+    <p><label id="lblRegMessage"></label></p>
+    <p><input type="text" id="txtRegName" placeholder="Enter Name"></p>
+    <p><input type="text" id="txtRegEmail" placeholder="Enter Email"></p>
+    <p><input type="password" id="txtRegPass" placeholder="Enter password"></p>
+    <button onclick="register()">Register</button>
+    <hr>
+    <h3>Login Here...</h3>
+    <p><label id="lblMessage"></label></p>
+    <p><input type="text" id="txtEmail" placeholder="Enter Email"></p>
+    <p><input type="password" id="txtPass" placeholder="Enter password"></p>
+    <button onclick="validate()">Login</button>
+    <hr><br>
+    <label id="lblUsers"></label>
 </body>
 </html>
