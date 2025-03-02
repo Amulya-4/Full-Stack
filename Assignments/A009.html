@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+</head>
+<body>
+    <fieldset>
+        <legend> <h1>Quiz</h1></legend>
+    <div class="quiz">
+        <p>1) 1 + 6 = <span id="ans1"></span></p>
+        <p>2) 7 + 3 = <span id="ans2"></span></p>
+        <p>3) 8 + 5 = <span id="ans3"></span></p>
+        <p>4) 2 + 4 = <span id="ans4"></span></p>
+        <p>5) 3 + 5 = <span id="ans5"></span></p>
+    </div>
+    <button onclick="showAnswers()">Show Answers</button>
+    </fieldset>
+    <br><br>
+    <fieldset>
+    <div class="quiz">
+        <p>1) 10 + 6 = <span id="adv1"></span></p>
+        <p>2) 17 - 3 = <span id="adv2"></span></p>
+        <p>3) 18 + 5 = <span id="adv3"></span></p>
+        <p>4) 12 × 4 = <span id="adv4"></span></p>
+        <p>5) 20 ÷ 5 = <span id="adv5"></span></p>
+    </div>
+    <button onclick="show()">Show Answers</button>
+    </fieldset>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+        function sub(a, b) {
+            return a - b;
+        }
+        function mul(a, b) {
+            return a * b;
+        }
+        function div(a, b) {
+            return a / b;
+        }
+
+        function showAnswers() {
+            // Basic Quiz Answers
+            document.getElementById("ans1").innerHTML = add(1, 6);
+            document.getElementById("ans2").innerText = add(7, 3);
+            document.getElementById("ans3").innerText = add(8, 5);
+            document.getElementById("ans4").innerText = add(2, 4);
+            document.getElementById("ans5").innerText = add(3, 5);
+        }
+        function show(){
+            // Advanced Quiz Answers
+            document.getElementById("adv1").innerText = add(10, 6);
+            document.getElementById("adv2").innerText = sub(17, 3);
+            document.getElementById("adv3").innerText = add(18, 5);
+            document.getElementById("adv4").innerText = mul(12, 4);
+            document.getElementById("adv5").innerText = div(20, 5);
+        }
+    </script>
+</body>
+</html>
+
