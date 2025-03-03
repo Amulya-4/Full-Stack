@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><input type="radio" name="fruit" class="c" value="1" />Apple</p> 
+    <!-- values can be changed value="apple" -->
+    <p><input type="radio" name="fruit" class="c" value="2" />Mango</p>
+    <p><input type="radio" name="fruit" class="c" value="3" />Orange</p>
+    <button onclick="disp()">Submit</button>
+    <hr />
+    <div id="d"></div>
+    <script>
+      const disp = () => {
+        let fruit = document.getElementsByClassName("c"); //getbyname doesn't work // <input>tag can use
+        let txt = "";
+        for (let i = 0; i < fruit.length; i++) {
+          if (fruit[i].checked) {  //checking the option is choosen or not 
+            txt = txt + fruit[i].value + " ";
+          }
+        }
+        d.innerHTML = txt; //selected option will be display below
+      };
+    </script>
+  </body>
+</html>
+</body>
+</html>
