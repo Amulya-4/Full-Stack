@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login Form</h1>
+    <div id="error" style="color: red"></div>
+    <input type="email" id="em" placeholder="Enter Email" /><br /><br />
+    <input type="password" id="pw" placeholder="Enter Password" /><br /><br />
+    <input type="submit" value="Submit" />
+    <script>
+      em.onblur = function () {  //onblur- when you come out of the text box
+        if (!em.value.includes("@")) {   //if there is no @ in email it checks  
+          error.innerHTML = "Invalid Email Address"; 
+        }
+      };
+      em.onfocus = function () { //onfocus- when you came on text box
+        error.innerHTML = "";
+      };
+    </script>
+  </body>
+</html>
