@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var is function scope
+        var a=20;
+        if(10>4){
+            var a=10; //reintialize 
+        }
+        console.log(a)   
+        // o/p =10 if we use "var" 'a' will change from 20 to 10 
+        //////////////////
+        let b = 20 
+        if (10>4){
+            let b = 10
+        }
+        console.log(b) 
+        ////let is a block and function scope
+        // o/p = 20 if we use let the intinal delcare value will be the o/p  
+    </script>
+</body>
+</html>

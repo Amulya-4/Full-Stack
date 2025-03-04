@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+        let name = "document.write(Hello world')" ///initial ' is missing syntax err
+        let result = eval(name)
+        console.log(result)
+        }catch(err) {
+            console.log(err)
+        }
+     ////////////////////////////////////
+        // try {
+        //     console.log(a); //shows error
+        // }
+        // catch (err){
+        // // console.log("Something went wrong"); //catch the err and display 
+        // console.log(err) //reference error msg 
+        // console.log(err.name) // name of the error is shown 
+        // console.log(err.message) //display msg of error
+        // }
+
+    </script>
+</body>
+</html>

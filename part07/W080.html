@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Wait 5 seconds for the message...</p>
+    <h2 id="demo"></h2>
+    <script>
+      function myfunc() {
+        let h = document.querySelector("#demo");
+        h.innerHTML = "Hello World";
+      }
+      setTimeout(myfunc,5000)
+    </script>
+  </body>
+</html>
