@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- //// show password while entering password //// -->
     <h2>login page</h2>
     <p><input type="text" placeholder="Enter Email"></p>
     <p><input type="password" id="txtPwd" placeholder="Enter Passowrd"></p>
@@ -14,9 +15,9 @@
     <script>
         function togglePwd(){
             if (txtPwd.type==="password"){
-                txtPws.type = "text";
+                txtPwd.type = "text";
             }else{
-                textPwd.type = "password";
+                txtPwd.type = "password";
             }
         }
     </script>
