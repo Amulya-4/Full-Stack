@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag inside the box</title>
+    <title>Drag inside the Box</title>
 </head>
 <style>
     #target {
@@ -20,6 +20,7 @@
         <img draggable="true" src="/images/ball.png" width="200px" id="ball"/>
     </div>
     <div id="target"></div>
+
     <script>
         ball.style.position="absolute";
         ball.ondragstart = function (event){
@@ -27,26 +28,15 @@
         };
         ball.ondragend = function (event){
             head.innerHTML = "Drag Ended";
-            // ball.style.left = "200px";
-            // ball.style.top = "100px";   //wherever you drag the ball ends at the give postion 
+            // ball.style.left = "250px";
+            // ball.style.top = "150px";   //wherever you drag the ball ends at the give postion 
            
             ball.style.left = event.pageX - 100 +"px"; //after leaving we can get X & Y-axis points
             ball.style.top = event.pageY - 100 +"px"; //it will move but not accurate do -100 is added for axis 
         };
         target.ondragenter = function(event){
             head.innerHTML = "Target Achieved";
-        }
-
-        /* ball.ondragover = function (event) {​
-              head.innerHTML = "Drag Ended";​
-              ball.style.left = event.pageX - 100 + "px";​
-              ball.style.top = event.pageY - 100 + "px";​
-            };​
-            ball.ondrag = function (event) {​
-              head.innerHTML = "Drag Started";​
-              ball.style.left = event.pageX - 100 + "px";​
-              ball.style.top = event.pageY - 100 + "px";​
-            };*/
+        };
     </script>
 </body>
 </html>
