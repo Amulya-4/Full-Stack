@@ -3,70 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
-</head>
-<style>
-    body{
-        background-color: rgb(221, 216, 216) ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .sub{
-        color: white;
-        background-color: rgb(5, 95, 250);
-        border: none;
-        width: 317px;
-        height: 40px;
-        border-radius: 7px;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .for{
-        color:rgb(67, 81, 244);
-    }
-    .cre{
-        color:white;
-        background-color: rgb(64, 180, 64);
-        border: none;
-        height: 40px;
-        border-radius: 7px;
-        font-size: medium;
-        padding: 10px;
-    }
-    .main{
-        display: flex;
-        padding: 10px;
-        justify-content: space-evenly;
-        gap: 50px;
-        height: 350px;
-        width: 4000px;
-    }
-    .login{
-        background-color: white;
-        border: 1px ;
-        padding: 10px;
-        border-radius: 7px;
-        justify-items: center;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        height: 300px;
-        width: 350px;
-    }
-    .text-box {
-        height: 30px;
-        width: 310px;
-    }
-    .fac{
-        height: 250px;
-        width: 400px;
-        font-size: xx-large;
-    }
-/*  */
-.grey{
+    <title>Sign Up Form</title>
+    <style>
+        .grey{
             color:rgb(110, 107, 107);
         }
         .gender-box {
@@ -84,7 +23,6 @@
             width: 150px;
         }
         .border {
-            background-color: white;
             border: 1px solid ;
             margin : auto;
             border-radius: 5px;
@@ -123,40 +61,12 @@
         padding: 10px;
         font-weight: bold;
         }
-</style>
+    </style>
+</head>
 <body>
-   <div class="main">
-
-      <div class="fac">
-        <h1 style="color: rgb(5, 95, 250);">facebook</h1>
-        <p><pre  style="font-family: Arial, Helvetica, sans-serif;">Facebook helps you connect and share 
-with the people in your life.</pre></p>
-       </div>
-
-       
-    <div>
-      <div class="login">
-        <br>
-          <input type="text" class="text-box" placeholder="Email address or phone number" required ><br><br>
-          <input type="password" class="text-box" placeholder="Password" required> <br><br>
-          <button class="sub">Log in</button><br>
-          <p class="for"><u>Forgotten password?</u></p>
-            <hr><br>
-           <button class="cre" onclick="acc()">Create new account</button>
-        </div>
-          <pre style="font-family: 'Times New Roman', Times, serif;"><span><b>        Create a Page</b></span> for a celebity, band or business</pre>
-    </div>
-   </div>
-
-
-
-
-
-
     <div class="border">
         <h1>Sign Up</h1>
         <p class="grey">It's quick and easy.</p><hr><br>
-        
         <input type="text" class="name" placeholder="First name">
         <input type="text" class="name" placeholder="Surname"><br><br>
         <input type="text" class="email" placeholder="Mobile number or email address"><br><br>
@@ -199,22 +109,15 @@ with the people in your life.</pre></p>
         <center><button class="sign">Sign Up</button></center>
     </div>
 
-
-
-
-
-
     <script>
-    // ///////////////////////////////////////////
-    let daySelect = document.getElementById("day");
-            for (let i = 1; i <= 31; i++) {
-                daySelect.innerHTML += `<option value="${i}">${i}</option>`;
-            }
-            let yearSelect = document.getElementById("year");
-            for (let i = 2010; i >= 1980; i--) {
-                yearSelect.innerHTML += `<option value="${i}">${i}</option>`;
-            }
-    
+        let daySelect = document.getElementById("day");
+        for (let i = 1; i <= 31; i++) {
+            daySelect.innerHTML += `<option value="${i}">${i}</option>`;
+        }
+        let yearSelect = document.getElementById("year");
+        for (let i = 2010; i >= 1980; i--) {
+            yearSelect.innerHTML += `<option value="${i}">${i}</option>`;
+        }
     </script>
 </body>
 </html>

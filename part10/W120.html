@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //only functions that returns promise can use .then
+      const f1 = () => {
+        return new Promise((resolve, reject) => {
+          //   resolve(5);
+          reject("Something went wrong");
+        });
+      };
+      const f2 = () => {
+        console.log("Function 2");
+      };
+      const f3 = async () => {
+        try {
+          let n1 = await f1();
+          f2(n1);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+      f3();
+
+      // f1()
+      //   .then(() => f2())
+      //   .catch((err) => console.log(err));
+
+      //only functions that returns promise can use .then
+      //   const f1 = () => {
+      //     return new Promise((resolve, reject) => {
+      //       resolve();
+      //     });
+      //   };
+
+      //   const f2 = () => {
+      //     console.log("Function 2");
+      //   };
+
+      //   f1()
+      //     .then(() => f2())
+      //     .catch((err) => console.log(err));
+
+      //
+      //   const makePayment = () => {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         let err = true;
+      //         if (!err) resolve();
+      //         else reject("Payment Error");
+      //       }, 5000);
+      //     });
+      //   };
+
+      //   const sendEmail = () => {
+      //     console.log("Email: Order has been processed");
+      //   };
+
+      //   const sendMessage = () => {
+      //     console.log("Message: Order has been processed");
+      //   };
+
+      //   makePayment() 
+      //     .then(() => sendEmail())  ////we can call more than one functions in this format 
+      //     .then(() => sendMessage()) 
+      //     .catch((err) => console.log(err));
+
+      //   //Promise ///
+      //   const f1 = (v) => {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         if (v>0) resolve(5)
+      //         else reject("Something went wrong");
+      //       }, 5000);
+      //     });
+      //   };
+
+      //   const f2 = (x) => {
+      //     console.log(x + 6);
+      //   };
+
+      //   f1(1)
+      //     .then((a) => f2(a)) // .then is used for excuting first f1 function and then f2 funtion 
+      //     .catch((err) => console.log(err)); //if the f1 function is rejected the .catch is used
+
+      ////////callback/////
+      //   const f1 = (fnc) => {
+      //     setTimeout(() => {
+      //       fnc(5);
+      //     }, 5000);
+      //   };
+      //   const f2 = (a) => {
+      //     console.log(a + 10);
+      //   };
+      //   f1(f2); 
+      ////callfunction is different frm previou, one of the  type of soln for not getting err
+
+      ////////////////////////
+      //asynchronous : occuring at the same time
+      //   const f1 = () => {
+      //     setTimeout(()=>{
+      //         return 5
+      //     },5000)
+      //   };
+      //   const f2 = (a) => {
+      //     console.log(a + 10);
+      //   };
+      //   let n1 = f1(); // if takes 5 seconds
+      //   f2(n1);  // then this will throw an error
+    </script>
+  </body>
+</html>
