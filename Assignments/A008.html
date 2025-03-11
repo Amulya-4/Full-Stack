@@ -1,72 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE html>=
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
-</head>
-<style>
-    body{
-        background-color: rgb(221, 216, 216) ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .sub{
-        color: white;
-        background-color: rgb(5, 95, 250);
-        border: none;
-        width: 317px;
-        height: 40px;
-        border-radius: 7px;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .for{
-        color:rgb(67, 81, 244);
-    }
-    .cre{
-        color:white;
-        background-color: rgb(64, 180, 64);
-        border: none;
-        height: 40px;
-        border-radius: 7px;
-        font-size: medium;
-        padding: 10px;
-    }
-    .main{
-        display: flex;
-        padding: 10px;
-        justify-content: space-evenly;
-        gap: 50px;
-        height: 350px;
-        width: 4000px;
-    }
-    .login{
-        background-color: white;
-        border: 1px ;
-        padding: 10px;
-        border-radius: 7px;
-        justify-items: center;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        height: 300px;
-        width: 350px;
-    }
-    .text-box {
+    <style>
+        body {
+            background-color: rgb(221, 216, 216);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .sub {
+            color: white;
+            background-color: rgb(5, 95, 250);
+            border: none;
+            width: 317px;
+            height: 40px;
+            border-radius: 7px;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .for {
+            color: rgb(67, 81, 244);
+            cursor: pointer;
+        }
+        .cre {
+            color: white;
+            background-color: rgb(64, 180, 64);
+            border: none;
+            height: 40px;
+            border-radius: 7px;
+            font-size: medium;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .main {
+            display: flex;
+            padding: 10px;
+            justify-content: space-evenly;
+            gap: 50px;
+            height: 350px;
+            width: 800px;
+        }
+        .login {
+            background-color: white;
+            padding: 20px;
+            border: 1px ;
+            border-radius: 7px;
+            justify-items: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            height: 273px;
+            width: 350px;
+            text-align: center;
+        }
+        .text-box {
         height: 30px;
         width: 310px;
-    }
-    .fac{
-        height: 250px;
-        width: 400px;
-        font-size: xx-large;
-    }
-/*  */
-.grey{
+        }
+        .fac {
+            font-size: x-large;
+            height: 250px;
+            width: 500px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .border {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 500px;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .grey{
             color:rgb(110, 107, 107);
         }
         .gender-box {
@@ -123,98 +151,81 @@
         padding: 10px;
         font-weight: bold;
         }
-</style>
+    </style>
+</head>
 <body>
    <div class="main">
-
-      <div class="fac">
+    <div class="fac">
         <h1 style="color: rgb(5, 95, 250);">facebook</h1>
         <p><pre  style="font-family: Arial, Helvetica, sans-serif;">Facebook helps you connect and share 
 with the people in your life.</pre></p>
        </div>
-
-       
-    <div>
-      <div class="login">
-        <br>
-          <input type="text" class="text-box" placeholder="Email address or phone number" required ><br><br>
-          <input type="password" class="text-box" placeholder="Password" required> <br><br>
-          <button class="sub">Log in</button><br>
-          <p class="for"><u>Forgotten password?</u></p>
-            <hr><br>
-           <button class="cre" onclick="acc()">Create new account</button>
-        </div>
-          <pre style="font-family: 'Times New Roman', Times, serif;"><span><b>        Create a Page</b></span> for a celebity, band or business</pre>
-    </div>
+      <div>
+          <div class="login">
+              <input type="text" class="text-box" placeholder="Email address or phone number" required><br><br>
+              <input type="password" class="text-box" placeholder="Password" required> <br><br>
+              <button class="sub">Log in</button><br>
+              <p class="for"><u>Forgotten password?</u></p>
+              <hr><br>
+              <button class="cre" onclick="openModal()">Create new account</button>
+          </div>
+          <pre style="font-family: 'Times New Roman', Times, serif;"><span><b>          Create a Page</b></span> for a celebity, band or business</pre>
+      </div>
    </div>
 
+   <div class="modal" id="signupModal">
+      <div class="border">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h1>Sign Up</h1>
+          <p class="grey">It's quick and easy.</p>
+          <hr><br>
+          <input type="text" class="name" placeholder="First name">
+          <input type="text" class="name" placeholder="Surname"><br><br>
+          <input type="text" class="email" placeholder="Mobile number or email address"><br><br>
+          <input type="password" class="email" placeholder="New password"><br><br>
+          <label class="grey">Date of birth</label><br>
+          <select class="dob" id="day"></select>
+          <select class="dob" id="month">
+              <option>Jan</option><option>Feb</option><option>Mar</option>
+              <option>Apr</option><option>May</option><option>Jun</option>
+              <option>Jul</option><option>Aug</option><option>Sep</option>
+              <option>Oct</option><option>Nov</option><option>Dec</option>
+          </select>
+          <select class="dob" id="year"></select>
+          <br><br>
+          <label class="grey">Gender</label>
+          <div class="gender-box">
+              <label class="gender-option">
+                  Female<input type="radio" name="gender" value="Female"> 
+              </label>
+              <label class="gender-option">
+                  Male <input type="radio" name="gender" value="Male"> 
+              </label>
+              <label class="gender-option">
+                  Custom <input type="radio" name="gender" value="Custom"> 
+              </label>
+          </div>
+          <p class="grey">People who use our service may have uploaded your contact information to Facebook. <span class="learn">Learn more.</span></p>
+          <p class="grey">By clicking Sign Up, you agree to our <span class="learn">Terms</span>, <span class="learn">Privacy Policy</span> and <span class="learn">Cookies Policy</span>. You may receive SMS notifications from us and can opt out at any time.</p>
+          <center><button class="sign" onclick="closeModal()">Sign Up</button></center>
+      </div>
+   </div>
 
-
-
-
-
-    <div class="border">
-        <h1>Sign Up</h1>
-        <p class="grey">It's quick and easy.</p><hr><br>
-        
-        <input type="text" class="name" placeholder="First name">
-        <input type="text" class="name" placeholder="Surname"><br><br>
-        <input type="text" class="email" placeholder="Mobile number or email address"><br><br>
-        <input type="password" class="email" placeholder="New password"><br><br>
-        
-        <label class="grey">Date of birth</label><br>
-        <div class="dmy">
-        <select class="dob" id="day" name="day"></select>    
-        <select class="dob"  id="month">
-            <option>Jan</option>
-            <option>Feb</option>
-            <option>Mar</option>
-            <option>Apr</option>
-            <option>May</option>
-            <option>Jun</option>
-            <option>Jul</option>
-            <option>Aug</option>
-            <option>Sep</option>
-            <option>Oct</option>
-            <option>Nov</option>
-            <option>Dec</option>
-        </select>
-        <select class="dob" id="year" name="year"></select>
-        </div>
-        <br>
-        <label class="grey">Gender</label>
-        <div class="gender-box">
-            <label class="gender-option">
-                Female<input type="radio" name="gender" value="Female"> 
-            </label>
-            <label class="gender-option">
-                Male <input type="radio" name="gender" value="Male"> 
-            </label>
-            <label class="gender-option">
-                Custom <input type="radio" name="gender" value="Custom"> 
-            </label>
-        </div>
-        <p class="grey">People who use our service may have uploaded your contact information to Facebook. <span class="learn">Learn more.</span></p>
-        <p class="grey">By clicking Sign Up, you agree to our <span class="learn">Terms</span>, <span class="learn">Privacy Policy</span> and <span class="learn">Cookies Policy</span>. You may receive SMS notifications from us and can opt out at any time.</p>
-        <center><button class="sign">Sign Up</button></center>
-    </div>
-
-
-
-
-
-
-    <script>
-    // ///////////////////////////////////////////
-    let daySelect = document.getElementById("day");
-            for (let i = 1; i <= 31; i++) {
-                daySelect.innerHTML += `<option value="${i}">${i}</option>`;
-            }
-            let yearSelect = document.getElementById("year");
-            for (let i = 2010; i >= 1980; i--) {
-                yearSelect.innerHTML += `<option value="${i}">${i}</option>`;
-            }
-    
-    </script>
+   <script>
+       function openModal() {
+           document.getElementById("signupModal").style.display = "flex";
+       }
+       function closeModal() {
+           document.getElementById("signupModal").style.display = "none";
+       }
+       let daySelect = document.getElementById("day");
+       for (let i = 1; i <= 31; i++) {
+           daySelect.innerHTML += `<option value="${i}">${i}</option>`;
+       }
+       let yearSelect = document.getElementById("year");
+       for (let i = 2010; i >= 1980; i--) {
+           yearSelect.innerHTML += `<option value="${i}">${i}</option>`;
+       }
+   </script>
 </body>
 </html>

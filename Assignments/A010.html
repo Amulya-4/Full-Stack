@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+</head>
+<style>
+    body{
+        background-color: rgb(221, 216, 216) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .sub{
+        color: white;
+        background-color: rgb(5, 95, 250);
+        border: none;
+        width: 317px;
+        height: 40px;
+        border-radius: 7px;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .for{
+        color:rgb(67, 81, 244);
+    }
+    .cre{
+        color:white;
+        background-color: rgb(64, 180, 64);
+        border: none;
+        height: 40px;
+        border-radius: 7px;
+        font-size: medium;
+        padding: 10px;
+    }
+    .main{
+        display: flex;
+        padding: 10px;
+        justify-content: space-evenly;
+        gap: 50px;
+        height: 350px;
+        width: 4000px;
+    }
+    .login{
+        background-color: white;
+        border: 1px ;
+        padding: 10px;
+        border-radius: 7px;
+        justify-items: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        height: 300px;
+        width: 350px;
+    }
+    .text-box {
+        height: 30px;
+        width: 310px;
+    }
+    .fac{
+        height: 250px;
+        width: 400px;
+        font-size: xx-large;
+    }
+</style>
+<script>
+    function validate(){
+            let strEmail = document.getElementById("txtEmail").value;
+            let strPass = document.getElementById("txtPass").value;
+            let loginBox = document.getElementById("loginBox");
+            if (strEmail=="john@gmail.com"  &&  strPass== "1234"){
+                loginBox.innerHTML = "<h2>Welcome John</h2>";
+           } else {
+            loginBox.innerHTML = "<h2>Access Denied</h2>";
+           }
+        }
+
+</script>
+<body>
+   <div class="main">
+      <div class="fac">
+        <h1 style="color: rgb(5, 95, 250);">facebook</h1>
+        <p><pre  style="font-family: Arial, Helvetica, sans-serif;">Facebook helps you connect and share 
+with the people in your life.</pre></p>
+       </div>
+    <div>
+      <div class="login" id="loginBox">
+        <br>
+          <input id="txtEmail" type="text" class="text-box" placeholder="Email address or phone number" required ><br><br>
+          <input  id="txtPass" type="password" class="text-box" placeholder="Password" required> <br><br>
+          <button class="sub" onclick="validate()">Log in</button><br>
+          <p class="for">Forgotten password?</p>
+            <hr><br>
+           <button class="cre">Create new account</button>
+        </div>
+          <pre style="font-family: 'Times New Roman', Times, serif;"><span><b>        Create a Page</b></span> for a celebity, band or business</pre>
+    </div>
+   </div>
+</body>
+</html>
