@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-        //apply function
+        //call
       const calc = {
         add: function () {
           return this.a + this.b;
@@ -17,7 +17,7 @@
         a:4,
         b:3,
       };
-      let v = calc.add.apply(values);
+      let v = calc.add.call(values);
       console.log(v)
     </script>
   </body>

@@ -7,18 +7,20 @@
   </head>
   <body>
     <script>
-        //apply function
+        //bind
       const calc = {
+        a: 2,
+        b: 5,
         add: function () {
           return this.a + this.b;
         },
       };
       const values = {
-        a:4,
-        b:3,
+        a: 4,
+        b: 5,
       };
-      let v = calc.add.apply(values);
-      console.log(v)
+      let a = calc.add.bind(values);  //bind - the values take from external 
+      console.log(a());
     </script>
   </body>
 </html>
